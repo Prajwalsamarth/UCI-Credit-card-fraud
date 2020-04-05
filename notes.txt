@@ -1,0 +1,16 @@
+1. Since the data is very imbalanced SMOTE may be a good option to try 
+
+2.Correlation is very low and non informative to determine anything
+
+3. most continuous variables are right skewed. This shows presence of high outliers
+
+4.Data of the PAY column contains 0 and -2 which are not defined. Information given about dataset maybe
+ wrong or theymay correspond the duly payed group i.e -1. So it is safer to try with given data and also 
+by imputing -1 in place of 0 and -2. 
+
+5.Without any changes in the data when the models are fit it seems that random forest and lightgbm boosting 
+algorithms give the highest accuracy. But the roc auc score is very low. This is probably because of 
+imbalanced data which is leading to low sensitivity or tpr
+
+6. Logistic regression and Naive bayes seems to be very bad
+
